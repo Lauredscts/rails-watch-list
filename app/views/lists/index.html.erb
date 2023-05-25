@@ -1,9 +1,8 @@
 <h1>My lists</h1>
-<div id="lists">
+
+<ul class="list-group">
   <% @lists.each do |list| %>
-    <%= render lists %>
-    <p>
-      <%= link_to "Show this movie", list %>
-    </p>
+    <li class="list-group-item"><%= link_to list.name, list_path(list)%></li>
   <% end %>
-</div>
+</ul>
+<br>
