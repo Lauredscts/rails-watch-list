@@ -9,4 +9,14 @@ Rails.application.routes.draw do
   get 'lists/:id/edit', to: 'lists#edit'
   patch 'lists/:id', to: 'lists#update'
   delete 'lists/:id', to: 'lists#destroy'
+
+  # resources :bookmarks, only: :destroy
+  # resources :reviews, only: :destroy
 end
+# FINISHING THE ROUTES
+
+# resources :lists do
+#   resources :lists, only: [:new, :create]
+# end
+# resources :reviews, only: [:destroy]
+# end
