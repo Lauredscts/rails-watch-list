@@ -1,8 +1,14 @@
-<h1>My lists</h1>
 
-<ul class="list-group">
-  <% @lists.each do |list| %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('./assets/images/'photocinema.jpg'), color white;">
+<%= image_tag 'photocinema.jpg', alt: "banner picture",style: 'width: 100vw ; height: auto'%>
+<div>
+  <div class="container">
+    <h1><strong>Save any kind of movies</strong> </h1>
+    <ul class="list-group">
+      <% @lists.each do |list| %>
     <li class="list-group-item"><%= link_to list.name, list_path(list)%></li>
-  <% end %>
-</ul>
-<br>
+    <% end %>
+      </ul>
+    <a class="btn btn-flat" href="#">Create new list</a>
+  </div>
+</div>
